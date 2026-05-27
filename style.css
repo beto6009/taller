@@ -1,0 +1,194 @@
+/* style.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#f2f2f2;
+  font-family:Arial;
+  padding:20px;
+}
+
+.contenedor{
+  max-width:1200px;
+  margin:auto;
+}
+
+#orden{
+  position:relative;
+  width:1080px;
+  margin:auto;
+}
+
+.plantilla{
+  width:100%;
+  display:block;
+}
+
+/* INPUTS */
+
+input,
+textarea{
+  position:absolute;
+  border:none;
+  background:transparent;
+  outline:none;
+  font-size:18px;
+  color:black;
+}
+
+textarea{
+  resize:none;
+}
+
+/* POSICIONES */
+
+.folio{
+  top:118px;
+  left:520px;
+  width:500px;
+}
+
+.fecha{
+  top:185px;
+  left:630px;
+  width:320px;
+}
+
+.cliente{
+  top:355px;
+  left:120px;
+  width:550px;
+}
+
+.telefono{
+  top:355px;
+  left:810px;
+  width:220px;
+}
+
+.direccion{
+  top:400px;
+  left:120px;
+  width:900px;
+}
+
+.marca{
+  top:442px;
+  left:90px;
+  width:300px;
+}
+
+.modelo{
+  top:442px;
+  left:480px;
+  width:280px;
+}
+
+.anio{
+  top:442px;
+  left:830px;
+  width:200px;
+}
+
+.placas{
+  top:485px;
+  left:90px;
+  width:360px;
+}
+
+.kilometraje{
+  top:485px;
+  left:610px;
+  width:420px;
+}
+
+.falla{
+  top:585px;
+  left:55px;
+  width:960px;
+  height:70px;
+}
+
+.trabajo1{
+  top:700px;
+  left:60px;
+  width:600px;
+}
+
+.precio1{
+  top:700px;
+  left:720px;
+  width:120px;
+}
+
+.importe1{
+  top:700px;
+  left:890px;
+  width:120px;
+}
+
+.trabajo2{
+  top:730px;
+  left:60px;
+  width:600px;
+}
+
+.precio2{
+  top:730px;
+  left:720px;
+  width:120px;
+}
+
+.importe2{
+  top:730px;
+  left:890px;
+  width:120px;
+}
+
+.subtotal{
+  top:1045px;
+  left:900px;
+  width:120px;
+}
+
+.iva{
+  top:1090px;
+  left:900px;
+  width:120px;
+}
+
+.total{
+  top:1145px;
+  left:900px;
+  width:120px;
+}
+
+button{
+  margin-top:20px;
+  width:100%;
+  padding:18px;
+  border:none;
+  background:black;
+  color:white;
+  font-size:20px;
+  border-radius:10px;
+}
+
+/* IOS RESPONSIVE */
+
+@media(max-width:1100px){
+
+  #orden{
+    width:100%;
+  }
+
+  input,
+  textarea{
+    font-size:10px;
+  }
+
+}

@@ -1,0 +1,92 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>IDA Automotriz</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+  <!-- IMAGEN DE FONDO -->
+  <div id="orden">
+
+    <img
+      src="https://i.imgur.com/8V4Q5xV.png"
+      class="plantilla"
+    />
+
+    <!-- FOLIO -->
+    <input class="folio" type="text" placeholder="0001">
+
+    <!-- FECHA -->
+    <input class="fecha" type="text" placeholder="27/05/2026">
+
+    <!-- CLIENTE -->
+    <input class="cliente" type="text" placeholder="Nombre del cliente">
+
+    <!-- TELEFONO -->
+    <input class="telefono" type="text" placeholder="7711358664">
+
+    <!-- DIRECCION -->
+    <input class="direccion" type="text" placeholder="Dirección">
+
+    <!-- MARCA -->
+    <input class="marca" type="text" placeholder="Nissan">
+
+    <!-- MODELO -->
+    <input class="modelo" type="text" placeholder="Versa">
+
+    <!-- AÑO -->
+    <input class="anio" type="text" placeholder="2020">
+
+    <!-- PLACAS -->
+    <input class="placas" type="text" placeholder="ABC123">
+
+    <!-- KILOMETRAJE -->
+    <input class="kilometraje" type="text" placeholder="120000">
+
+    <!-- FALLA -->
+    <textarea class="falla"></textarea>
+
+    <!-- TRABAJOS -->
+    <input class="trabajo1" type="text" placeholder="Cambio de aceite">
+    <input class="precio1" type="text" placeholder="500">
+    <input class="importe1" type="text" placeholder="500">
+
+    <input class="trabajo2" type="text">
+    <input class="precio2" type="text">
+    <input class="importe2" type="text">
+
+    <!-- SUBTOTAL -->
+    <input class="subtotal" type="text" placeholder="500">
+
+    <!-- IVA -->
+    <input class="iva" type="text" placeholder="80">
+
+    <!-- TOTAL -->
+    <input class="total" type="text" placeholder="580">
+
+  </div>
+
+  <button onclick="generarPDF()">
+    DESCARGAR PDF
+  </button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
