@@ -1,88 +1,306 @@
-<!-- index.html -->
+` 
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>IDA Automotriz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css" />
+<title>Formulario</title>
 
-  <!-- PDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<!-- JSPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div class="contenedor">
+<div class="container">
 
-  <!-- IMAGEN DE FONDO -->
-  <div id="orden">
+<h1>Formulario</h1>
 
-    <img
-      src="orden.png"
-      class="plantilla"
-    />
+<!-- TIPO DE SERVICIO -->
 
-    <!-- FOLIO -->
-    <input class="folio" type="text" placeholder="0001">
+<div class="section">
 
-    <!-- FECHA -->
-    <input class="fecha" type="text" placeholder="27/05/2026">
+<label>Tipo de Documento</label>
 
-    <!-- CLIENTE -->
-    <input class="cliente" type="text" placeholder="Nombre del cliente">
+<select id="tipoDocumento">
 
-    <!-- TELEFONO -->
-    <input class="telefono" type="text" placeholder="7711358664">
+    <option value="">
+        Seleccionar tipo de documento
+    </option>
 
-    <!-- DIRECCION -->
-    <input class="direccion" type="text" placeholder="Dirección">
+    <option value="Nota / Orden de trabajo">
+        Nota / Orden de trabajo
+    </option>
 
-    <!-- MARCA -->
-    <input class="marca" type="text" placeholder="Nissan">
+    <option value="Cotización">
+        Cotización
+    </option>
 
-    <!-- MODELO -->
-    <input class="modelo" type="text" placeholder="Versa">
+</select>
 
-    <!-- AÑO -->
-    <input class="anio" type="text" placeholder="2020">
+</div>
 
-    <!-- PLACAS -->
-    <input class="placas" type="text" placeholder="ABC123">
+<br> </br> 
+<!-- DATOS -->
 
-    <!-- KILOMETRAJE -->
-    <input class="kilometraje" type="text" placeholder="120000">
+<div class="grid">
+ 
+ <div> <label>Folio</label> 
+    <input type="text" id="folio" readonly >
+ </div>
 
-    <!-- FALLA -->
-    <textarea class="falla"></textarea>
+    <div>
+        <label>Fecha</label>
+        <input type="date" id="fecha">
+    </div>
 
-    <!-- TRABAJOS -->
-    <input class="trabajo1" type="text" placeholder="Cambio de aceite">
-    <input class="precio1" type="text" placeholder="500">
-    <input class="importe1" type="text" placeholder="500">
+    <div>
+        <label>Nombre delCliente</label>
+        <input type="text" id="cliente">
+    </div>
 
-    <input class="trabajo2" type="text">
-    <input class="precio2" type="text">
-    <input class="importe2" type="text">
+    <div>
+        <label>Teléfono</label>
+        <input type="text" id="telefono">
+    </div>
 
-    <!-- SUBTOTAL -->
-    <input class="subtotal" type="text" placeholder="500">
+    <div class="full">
+        <label>Dirección del cliente</label>
+        <input type="text" id="direccion">
+    </div>
 
-    <!-- IVA -->
-    <input class="iva" type="text" placeholder="80">
+    <div>
+        <label>Marca</label>
+        <input type="text" id="marca">
+    </div>
 
-    <!-- TOTAL -->
-    <input class="total" type="text" placeholder="580">
+    <div>
+        <label>Modelo</label>
+        <input type="text" id="modelo">
+    </div>
 
-  </div>
+    <div>
+        <label>Año</label>
+        <input type="text" id="anio">
+    </div>
 
-  <button onclick="generarPDF()">
-    DESCARGAR PDF
-  </button>
+    <div>
+        <label>Placas</label>
+        <input type="text" id="placas">
+    </div>
+
+    <div>
+        <label>Kilometraje</label>
+        <input type="text" id="km">
+    </div>
+
+    <div class="full">
+        <label>Falla Reportada</label>
+        <textarea id="falla"></textarea>
+    </div>
+
+</div>
+
+<!-- TRABAJOS -->
+
+<div class="section">
+
+<h2>Trabajos realizados</h2>
+
+<table>
+
+<thead>
+
+<tr>
+    <th>Descripción</th>
+    <th>Precio unitario</th>
+    <th>Importe</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+    <td><input type="text" class="trabajo"></td>
+    <td><input type="number" class="precio"></td>
+    <td><input type="number" class="importe"></td>
+</tr>
+
+<tr>
+    <td><input type="text" class="trabajo"></td>
+    <td><input type="number" class="precio"></td>
+    <td><input type="number" class="importe"></td>
+</tr>
+
+<tr>
+    <td><input type="text" class="trabajo"></td>
+    <td><input type="number" class="precio"></td>
+    <td><input type="number" class="importe"></td>
+</tr>
+
+<tr>
+    <td><input type="text" class="trabajo"></td>
+    <td><input type="number" class="precio"></td>
+    <td><input type="number" class="importe"></td>
+</tr>
+
+<tr>
+    <td><input type="text" class="trabajo"></td>
+    <td><input type="number" class="precio"></td>
+    <td><input type="number" class="importe"></td>
+</tr>
+
+<tr>
+    <td><input type="text" class="trabajo"></td>
+    <td><input type="number" class="precio"></td>
+    <td><input type="number" class="importe"></td>
+</tr>
+
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- REFACCIONES -->
+
+<div class="section">
+
+<h2>Refacciones</h2>
+
+<table>
+
+<thead>
+
+<tr>
+    <th>Descripción</th>
+    <th>Precio unitario</th>
+    <th>Importe</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+    <td><input type="text" class="refaccion"></td>
+    <td><input type="number" class="refprecio"></td>
+    <td><input type="number" class="refimporte"></td>
+</tr>
+
+<tr>
+    <td><input type="text" class="refaccion"></td>
+    <td><input type="number" class="refprecio"></td>
+    <td><input type="number" class="refimporte"></td>
+</tr>
+
+<tr>
+    <td><input type="text" class="refaccion"></td>
+    <td><input type="number" class="refprecio"></td>
+    <td><input type="number" class="refimporte"></td>
+</tr>
+
+<tr>
+    <td><input type="text" class="refaccion"></td>
+    <td><input type="number" class="refprecio"></td>
+    <td><input type="number" class="refimporte"></td>
+</tr>
+
+<tr>
+    <td><input type="text" class="refaccion"></td>
+    <td><input type="number" class="refprecio"></td>
+    <td><input type="number" class="refimporte"></td>
+</tr>
+
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- TOTALES -->
+
+<div class="section">
+
+<div class="grid">
+
+    <div>
+        <label>Subtotal</label>
+        <input type="number" id="subtotal" readonly>
+    </div>
+
+    <div>
+        <label>IVA</label>
+        <input type="number" id="iva" readonly>
+    </div>
+
+    <div class="full">
+        <label>Total</label>
+        <input type="number" id="total" readonly>
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- TIPO DE SERVICIO -->
+
+<div class="section">
+
+<label>Tipo de Servicio</label>
+
+<select id="tipoServicio">
+
+    <option value="">
+        Seleccionar servicio
+    </option>
+
+    <option value="Preventivo">
+        Preventivo
+    </option>
+
+    <option value="Correctivo">
+        Correctivo
+    </option>
+
+    <option value="Diagnóstico">
+        Diagnóstico
+    </option>
+
+    <option value="Garantía">
+        Garantía
+    </option>
+
+    <option value="Otro">
+        Otro
+    </option>
+
+</select>
+
+</div>
+
+<!-- OBSERVACIONES -->
+
+<div class="section">
+
+<label>Observaciones</label>
+
+<textarea id="observaciones"></textarea>
+
+</div>
+
+<button onclick="generarPDF()">
+EXPORTAR PDF
+</button>
 
 </div>
 
@@ -90,3 +308,4 @@
 
 </body>
 </html>
+```
