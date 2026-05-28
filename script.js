@@ -209,8 +209,8 @@ async function generarPDF() {
 
         pdf.setFontSize(10);
 
-        pdf.text(subtotal.toString(), 182, 228.65);
-        pdf.text(iva.toString(), 182, 235.75);
+        pdf.text(subtotal.toString(), 182, 228.85);
+        pdf.text(iva.toString(), 182, 235.95);
 
         pdf.setFont("helvetica", "bold");
         pdf.setFontSize(10);
