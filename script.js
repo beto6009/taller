@@ -169,7 +169,7 @@ async function generarPDF() {
            TRABAJOS
         ========================= */
 
-        let yTrabajos = 147.34;
+        let yTrabajos = 150.34;
 
         document.querySelectorAll('.trabajo').forEach((input, index) => {
 
@@ -188,7 +188,7 @@ async function generarPDF() {
            REFACCIONES
         ========================= */
 
-        let yRefacciones = 191.79;
+        let yRefacciones = 195.79;
 
         document.querySelectorAll('.refaccion').forEach((input, index) => {
 
