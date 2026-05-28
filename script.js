@@ -169,7 +169,7 @@ async function generarPDF() {
            TRABAJOS
         ========================= */
 
-        let yTrabajos = 150.34;
+        let yTrabajos = 149.34;
 
         document.querySelectorAll('.trabajo').forEach((input, index) => {
 
