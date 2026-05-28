@@ -209,13 +209,13 @@ async function generarPDF() {
 
         pdf.setFontSize(10);
 
-        pdf.text(subtotal.toString(), 182, 227.70);
-        pdf.text(iva.toString(), 182, 234.750);
+        pdf.text(subtotal.toString(), 182, 227.90);
+        pdf.text(iva.toString(), 182, 234.95);
 
         pdf.setFont("helvetica", "bold");
         pdf.setFontSize(10);
 
-        pdf.text(total.toString(), 182, 243.70);
+        pdf.text(total.toString(), 182, 243.90);
         pdf.text("Ivan Salinas Morales".toString(), 152.93, 286.32);
 
 
